@@ -2,10 +2,10 @@
   "name": "express-blog-routing",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "serve": "node ./index.js",
-    "watch": "node --watch ./index.js"
+    "serve": "node ./app.js",
+    "watch": "node --watch --env-file=.env ./app.js"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,7 @@
   },
   "packageManager": "pnpm@12.16.1",
   "dependencies": {
-    "express": "^5.3.0"
+    "express": "^5.3.0",
+    "mysql2": "^3.24.6"
   }
 }

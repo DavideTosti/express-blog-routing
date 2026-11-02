@@ -1,5 +1,32 @@
-Se viene generato un errore server side, un middleware si occuperà di rispondere con un messaggio e uno status appropriato.
-Se viene chiamato un endpoint inesistente, un middleware dovrà rispondere un messaggio e uno status appropriato.
+## Esercizio
 
-Se viene generato un errore server side, un middleware si occuperà di rispondere con un messaggio e uno status appropriato.
-Se viene chiamato un endpoint inesistente, un middleware dovrà rispondere un messaggio e uno status appropriato.
+includiamo nelle rotte precedentemente create per il vostro blog le queries opportune al DB MySQL.
+
+Milestone 1
+
+Importiamo il db in allegato su DBeaver, creando un nuovo DB e importando il file sql allegato
+Installiamo il client mysql2 con pnpm add mysql2 nell’app Express
+Creiamo un file di configurazione per connettere il database.
+
+
+Milestone 2
+
+Facciamo sì che la rotta INDEX restituisca la lista di post recuperata dal database in formato JSON
+Verifichiamo su Postman che la risposta sia corretta
+
+Milestone 3
+
+Facciamo sì che la rotta DESTROY permetta di eliminare un post dal database
+Verifichiamo su Postman che la chiamata non dia errore e risponda 204
+Verifichiamo su DBeaver che il post venga effettivamente rimosso
+
+
+Milestone 4
+
+Facciamo sì che la rotta SHOW restituisca il post desiderato in formato JSON
+Verifichiamo su Postman che la risposta sia corretta
+
+
+Bonus:
+
+Far sì che la SHOW restituisca il post comprensivo di tag, recuperandoli grazie alla relazione tra post e tags, esistente sul database
