@@ -2,8 +2,9 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const postsRouter = require("./routers/posts");
+const errorHandler = require("./middlewares/errorHandler");
+const notFound = require("./middlewares/notFound");
 
-//ASSET STATICI
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
@@ -13,5 +14,8 @@ app.get("/", (req, res) => {
 app.use("/posts", postsRouter);
 
 app.listen(port, () => {
-  console.log(`Server in ascolto alla porta: ${port}`);
+  console.log(`App in ascolto alla porta: ${port}`);
 });
+
+app.use(errorHandler);
+app.use(notFound);
